@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Jardin de Veyrac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Le Jardin de Veyrac</h1>
+    <div class="carousel-container">
+        <div class="carousel-slide active-slide">
+            <img src=".\img\Fleur_1.jpg" alt="Fleur_1.jpg">
+            <p>Image 1 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_10.jpg" alt="Fleur_10.jpg">
+            <p>Image 2 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_11.jpg" alt="Fleur_11.jpg">
+            <p>Image 3 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_12.jpg" alt="Fleur_12.jpg">
+            <p>Image 4 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_13.jpg" alt="Fleur_13.jpg">
+            <p>Image 5 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_14.jpg" alt="Fleur_14.jpg">
+            <p>Image 6 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_15.jpg" alt="Fleur_15.jpg">
+            <p>Image 7 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_16.jpg" alt="Fleur_16.jpg">
+            <p>Image 8 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_17.jpg" alt="Fleur_17.jpg">
+            <p>Image 9 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_18.jpg" alt="Fleur_18.jpg">
+            <p>Image 10 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_19.jpg" alt="Fleur_19.jpg">
+            <p>Image 11 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_2.jpg" alt="Fleur_2.jpg">
+            <p>Image 12 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_20.jpg" alt="Fleur_20.jpg">
+            <p>Image 13 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_21.jpg" alt="Fleur_21.jpg">
+            <p>Image 14 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_22.jpg" alt="Fleur_22.jpg">
+            <p>Image 15 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_23.jpg" alt="Fleur_23.jpg">
+            <p>Image 16 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_24.jpg" alt="Fleur_24.jpg">
+            <p>Image 17 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_25.jpg" alt="Fleur_25.jpg">
+            <p>Image 18 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_26.jpg" alt="Fleur_26.jpg">
+            <p>Image 19 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_27.jpg" alt="Fleur_27.jpg">
+            <p>Image 20 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_3.jpg" alt="Fleur_3.jpg">
+            <p>Image 21 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_4.jpg" alt="Fleur_4.jpg">
+            <p>Image 22 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_5.jpg" alt="Fleur_5.jpg">
+            <p>Image 23 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_6.jpg" alt="Fleur_6.jpg">
+            <p>Image 24 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_7.jpg" alt="Fleur_7.jpg">
+            <p>Image 25 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_8.jpg" alt="Fleur_8.jpg">
+            <p>Image 26 de 27</p>
+        </div>
+        <div class="carousel-slide">
+            <img src=".\img\Fleur_9.jpg" alt="Fleur_9.jpg">
+            <p>Image 27 de 27</p>
+        </div>
+    </div>
+    <div class="carousel-icons left prevent-select" onclick="changeSlide(-1)"> &lt; </div>
+    <div class="carousel-icons right prevent-select" onclick="changeSlide(1)"> &gt; </div>
+
+    <script>
+        var currentSlideIndex = 0;
+        var slides = document.querySelectorAll(".carousel-slide");
+
+        function showSlide() {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active-slide");
+            }
+            slides[currentSlideIndex].classList.add("active-slide");
+        }
+
+        // Function to change slide based on the direction (1 for forward, -1 for backward)
+        function changeSlide(direction) {
+            currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+            showSlide();
+        }
+    </script>
+</body>
+</html>

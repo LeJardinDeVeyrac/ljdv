@@ -1,0 +1,53 @@
+html {
+    background-color: white;
+    text-align: center;
+    color: green;
+    font-family: Trebuchet MS;
+}
+
+img {
+    max-height: 526px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* Style for the carousel container */
+.carousel-container {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Style for the carousel slides */
+.carousel-slide {
+    display: none;
+}
+
+/* Style for the active slide */
+.active-slide {
+    display: block;
+}
+
+/* Style for the forward and backward icons */
+.carousel-icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carousel-icons.left {
+    left: 10px;
+}
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.carousel-icons.right {
+    right: 10px;
+}
